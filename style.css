@@ -1,0 +1,104 @@
+/* Full-page Diwali background */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at 30% 10%, #4b0000 0%, #1a0010 70%, #000010 100%);
+  overflow: hidden;
+  color: #fffbe6;
+}
+
+/* Canvas for fireworks */
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Input box overlay */
+.input-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 50px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #ffb347;
+  z-index: 2;
+  animation: fadeIn 2s ease-out;
+}
+
+.input-box h2 {
+  color: #ffdf8c;
+  text-shadow: 0 0 10px #ff6b00;
+}
+
+.input-box input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 1em;
+  width: 220px;
+}
+
+.input-box button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #ff8800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff6b00;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  background: #ffaa00;
+  transform: scale(1.1);
+}
+
+/* Greeting text centered */
+.greeting {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fadeInUp 2s ease-out forwards;
+  z-index: 1;
+}
+
+.hidden { display: none; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translate(-50%, -40%) scale(0.9); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* Glowing Diwali text */
+.greeting h1 {
+  font-size: 3em;
+  color: #ffe4a0;
+  text-shadow: 0 0 20px #ffb347, 0 0 40px #ff6b00, 0 0 60px #ff4500;
+}
+
+.greeting p {
+  font-size: 1.2em;
+  color: #ffdca8;
+  text-shadow: 0 0 10px #ff6b00;
+  margin-top: 10px;
+}
